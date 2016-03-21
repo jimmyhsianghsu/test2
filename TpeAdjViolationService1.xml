@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://service.vil.m3.mvdis.gov" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:ns1="http://pub.service.vil.m3.mvdis.gov/" name="TpeAdjViolationService" targetNamespace="http://service.vil.m3.mvdis.gov">
+  <wsdl:import location="TpeAdjViolationService2.xml" namespace="http://pub.service.vil.m3.mvdis.gov/">
+    </wsdl:import>
+  <wsdl:binding name="TpeAdjViolationServiceSoapBinding" type="ns1:TpeAdjViolationService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="adjustViolation">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="adjustViolation">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="adjustViolationResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchAdjPayment">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchAdjPayment">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchAdjPaymentResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAdjViolationByCar">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getAdjViolationByCar">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getAdjViolationByCarResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAdjViolationByPerson">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getAdjViolationByPerson">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getAdjViolationByPersonResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAdjViolationByTicket">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getAdjViolationByTicket">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getAdjViolationByTicketResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="receiveAdjViolation">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="receiveAdjViolation">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="receiveAdjViolationResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchAdjPermByPerson">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchAdjPermByPerson">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchAdjPermByPersonResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchAdjRemedyByTicket">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchAdjRemedyByTicket">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchAdjRemedyByTicketResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setAdjNum">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="setAdjNum">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="setAdjNumResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TpeAdjViolationService">
+    <wsdl:port binding="tns:TpeAdjViolationServiceSoapBinding" name="TpeAdjViolationServiceImplPort">
+      <soap:address location="http://localhost:8081/m3-service/vil/vil001/s008"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

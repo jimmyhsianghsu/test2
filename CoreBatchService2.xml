@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://pub.service.batch.m3.mvdis.gov/" name="CoreBatchService" targetNamespace="http://pub.service.batch.m3.mvdis.gov/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://pub.service.batch.m3.mvdis.gov/" elementFormDefault="unqualified" targetNamespace="http://pub.service.batch.m3.mvdis.gov/" version="1.0">
+
+  <xs:element name="restartJob" type="tns:restartJob"/>
+
+  <xs:element name="restartJobResponse" type="tns:restartJobResponse"/>
+
+  <xs:element name="startJob" type="tns:startJob"/>
+
+  <xs:element name="startJobResponse" type="tns:startJobResponse"/>
+
+  <xs:element name="stopJob" type="tns:stopJob"/>
+
+  <xs:element name="stopJobResponse" type="tns:stopJobResponse"/>
+
+  <xs:element name="unscheduleJob" type="tns:unscheduleJob"/>
+
+  <xs:element name="unscheduleJobResponse" type="tns:unscheduleJobResponse"/>
+
+  <xs:complexType name="stopJob">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="stopJobResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="restartJob">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="restartJobResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="unscheduleJob">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="unscheduleJobResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="startJob">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element name="arg2">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="entry">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" name="key" type="xs:string"/>
+                  <xs:element minOccurs="0" name="value" type="xs:anyType"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="serviceMapEntry">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="key" type="xs:anyType"/>
+      <xs:element minOccurs="0" name="value" type="xs:anyType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="startJobResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType final="#all" name="serviceMapEntryArray">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="item" nillable="true" type="tns:serviceMapEntry"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="restartJob">
+    <wsdl:part element="ns1:restartJob" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="stopJobResponse">
+    <wsdl:part element="ns1:stopJobResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="stopJob">
+    <wsdl:part element="ns1:stopJob" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="unscheduleJobResponse">
+    <wsdl:part element="ns1:unscheduleJobResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="startJobResponse">
+    <wsdl:part element="ns1:startJobResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="startJob">
+    <wsdl:part element="ns1:startJob" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="unscheduleJob">
+    <wsdl:part element="ns1:unscheduleJob" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="restartJobResponse">
+    <wsdl:part element="ns1:restartJobResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="CoreBatchService">
+    <wsdl:operation name="stopJob">
+      <wsdl:input message="ns1:stopJob" name="stopJob">
+    </wsdl:input>
+      <wsdl:output message="ns1:stopJobResponse" name="stopJobResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="restartJob">
+      <wsdl:input message="ns1:restartJob" name="restartJob">
+    </wsdl:input>
+      <wsdl:output message="ns1:restartJobResponse" name="restartJobResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="unscheduleJob">
+      <wsdl:input message="ns1:unscheduleJob" name="unscheduleJob">
+    </wsdl:input>
+      <wsdl:output message="ns1:unscheduleJobResponse" name="unscheduleJobResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="startJob">
+      <wsdl:input message="ns1:startJob" name="startJob">
+    </wsdl:input>
+      <wsdl:output message="ns1:startJobResponse" name="startJobResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

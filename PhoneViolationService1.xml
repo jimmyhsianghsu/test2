@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://service.vil.m3.mvdis.gov" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:ns1="http://pub.service.vil.m3.mvdis.gov/" name="PhoneViolationService" targetNamespace="http://service.vil.m3.mvdis.gov">
+  <wsdl:import location="PhoneViolationService2.xml" namespace="http://pub.service.vil.m3.mvdis.gov/">
+    </wsdl:import>
+  <wsdl:binding name="PhoneViolationServiceSoapBinding" type="ns1:PhoneViolationService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="searchTotalPenaltyByLegalPerson">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchTotalPenaltyByLegalPerson">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchTotalPenaltyByLegalPersonResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchTotalPenaltyByNaturalPerson">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchTotalPenaltyByNaturalPerson">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchTotalPenaltyByNaturalPersonResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchTotalPenaltyByLegalPersonRestrict">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchTotalPenaltyByLegalPersonRestrict">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchTotalPenaltyByLegalPersonRestrictResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchTotalPenaltyByNaturalPersonRestrict">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchTotalPenaltyByNaturalPersonRestrict">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchTotalPenaltyByNaturalPersonRestrictResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PhoneViolationService">
+    <wsdl:port binding="tns:PhoneViolationServiceSoapBinding" name="PhoneViolationServiceImplPort">
+      <soap:address location="http://localhost:8081/m3-service/vil/vil001/s007"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,336 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://service.vil.m3.mvdis.gov" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:ns1="http://pub.service.vil.m3.mvdis.gov/" name="EmvViolationService" targetNamespace="http://service.vil.m3.mvdis.gov">
+  <wsdl:import location="EmvViolationService2.xml" namespace="http://pub.service.vil.m3.mvdis.gov/">
+    </wsdl:import>
+  <wsdl:binding name="EmvViolationServiceSoapBinding" type="ns1:EmvViolationService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="searchMarkByNaturalPersonCount">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchMarkByNaturalPersonCount">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchMarkByNaturalPersonCountResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateViolation">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="updateViolation">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateViolationResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchPenaltyByNaturalPersonCount">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchPenaltyByNaturalPersonCount">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchPenaltyByNaturalPersonCountResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchVehViolationCount">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchVehViolationCount">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchVehViolationCountResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchLegalPersonPaymentByIdTicketPlateCount">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchLegalPersonPaymentByIdTicketPlateCount">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchLegalPersonPaymentByIdTicketPlateCountResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchRepealDataByCarCount">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchRepealDataByCarCount">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchRepealDataByCarCountResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchPaymentByLegalPerson">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchPaymentByLegalPerson">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchPaymentByLegalPersonResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchMarkByLegalPersonCount">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchMarkByLegalPersonCount">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchMarkByLegalPersonCountResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchPenaltyByLegalPersonCount">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchPenaltyByLegalPersonCount">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchPenaltyByLegalPersonCountResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchDriverMarkPoint">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchDriverMarkPoint">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchDriverMarkPointResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchLegalPersonPaymentByIdPlatePage">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchLegalPersonPaymentByIdPlatePage">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchLegalPersonPaymentByIdPlatePageResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchMarkByDriver">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchMarkByDriver">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchMarkByDriverResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchPaymentByLegalPersonCount">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchPaymentByLegalPersonCount">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchPaymentByLegalPersonCountResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchMarkByLegalPersonPage">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchMarkByLegalPersonPage">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchMarkByLegalPersonPageResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchPenaltyByNaturalPersonRestrict">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchPenaltyByNaturalPersonRestrict">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchPenaltyByNaturalPersonRestrictResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchLegalPersonPaymentByIdTicketPlatePage">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchLegalPersonPaymentByIdTicketPlatePage">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchLegalPersonPaymentByIdTicketPlatePageResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchMarkByNaturalPersonPage">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchMarkByNaturalPersonPage">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchMarkByNaturalPersonPageResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchPenaltyByLegalPersonCountRestrict">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchPenaltyByLegalPersonCountRestrict">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchPenaltyByLegalPersonCountRestrictResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchPenaltyByLegalPersonRestrict">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchPenaltyByLegalPersonRestrict">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchPenaltyByLegalPersonRestrictResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchWineVilList">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchWineVilList">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchWineVilListResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchLegalPersonPenaltyByIdPlatePage">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchLegalPersonPenaltyByIdPlatePage">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchLegalPersonPenaltyByIdPlatePageResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchLegalPersonPaymentByIdPlateCount">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchLegalPersonPaymentByIdPlateCount">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchLegalPersonPaymentByIdPlateCountResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchViolationByTicketPersonPlate">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchViolationByTicketPersonPlate">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchViolationByTicketPersonPlateResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchPenaltyByNaturalPersonCountRestrict">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchPenaltyByNaturalPersonCountRestrict">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchPenaltyByNaturalPersonCountRestrictResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchPenaltyByNaturalPerson">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchPenaltyByNaturalPerson">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchPenaltyByNaturalPersonResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchSuspDriverLicence">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchSuspDriverLicence">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchSuspDriverLicenceResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchLegalPersonPenaltyByIdTicketPlatePage">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchLegalPersonPenaltyByIdTicketPlatePage">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchLegalPersonPenaltyByIdTicketPlatePageResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchPlateMarkPoint">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchPlateMarkPoint">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchPlateMarkPointResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchLegalPersonPenaltyByIdTicketPlateCount">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchLegalPersonPenaltyByIdTicketPlateCount">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchLegalPersonPenaltyByIdTicketPlateCountResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchLegalPersonPenaltyByIdPlateCount">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchLegalPersonPenaltyByIdPlateCount">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchLegalPersonPenaltyByIdPlateCountResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchPenaltyByLegalPerson">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchPenaltyByLegalPerson">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchPenaltyByLegalPersonResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchPaymentByNaturalPerson">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchPaymentByNaturalPerson">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchPaymentByNaturalPersonResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchPaymentByNaturalPersonCount">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchPaymentByNaturalPersonCount">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchPaymentByNaturalPersonCountResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchSuspPlate">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchSuspPlate">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchSuspPlateResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchViolationByTicketPerson">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchViolationByTicketPerson">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchViolationByTicketPersonResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchWineVilListByTRP">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchWineVilListByTRP">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchWineVilListByTRPResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EmvViolationService">
+    <wsdl:port binding="tns:EmvViolationServiceSoapBinding" name="EmvViolationServiceImplPort">
+      <soap:address location="http://localhost:8081/m3-service/vil/vil001/s004"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

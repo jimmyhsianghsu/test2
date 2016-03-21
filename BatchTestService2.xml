@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://pub.service.batch.m3.mvdis.gov/" name="BatchTestService" targetNamespace="http://pub.service.batch.m3.mvdis.gov/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://pub.service.batch.m3.mvdis.gov/" elementFormDefault="unqualified" targetNamespace="http://pub.service.batch.m3.mvdis.gov/" version="1.0">
+
+  <xs:element name="launchJob" type="tns:launchJob"/>
+
+  <xs:element name="launchJobResponse" type="tns:launchJobResponse"/>
+
+  <xs:complexType name="launchJob">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element name="arg1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="entry">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" name="key" type="xs:string"/>
+                  <xs:element minOccurs="0" name="value" type="xs:anyType"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="serviceMapEntry">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="key" type="xs:anyType"/>
+      <xs:element minOccurs="0" name="value" type="xs:anyType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="launchJobResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType final="#all" name="serviceMapEntryArray">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="item" nillable="true" type="tns:serviceMapEntry"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="launchJob">
+    <wsdl:part element="ns1:launchJob" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="launchJobResponse">
+    <wsdl:part element="ns1:launchJobResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="BatchTestService">
+    <wsdl:operation name="launchJob">
+      <wsdl:input message="ns1:launchJob" name="launchJob">
+    </wsdl:input>
+      <wsdl:output message="ns1:launchJobResponse" name="launchJobResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

@@ -1,0 +1,38 @@
+<html>
+<head>
+<script src="lib/codemirror.js"></script>
+<link rel="stylesheet" href="lib/codemirror.css">
+<script src="mode/javascript/javascript.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js" charset="utf-8"></script>
+<style>
+.compDiff{background-color: 00FF00}
+</style>
+</head>
+
+<body>
+<table width="80%">
+	<tr>
+		<td valign="top" width="50%"><div style="width:100%;height:500px;border:solid 1px blue"></div></td>
+		<td valign="top" width="50%"><div style="width:100%;height:500px;border:solid 1px blue"></div></td>
+	</tr>
+</table>
+</body>
+
+<script>
+function aaa(){
+
+var myCodeMirror = CodeMirror($('div')[0], {
+  value: "aaaaaaaaaa\n0123456789\ncccccccccc\ndddddddddd\n<div></div><table><tr><td>1</td></tr></table>",
+  firstLineNumber:0,
+  readOnly:true,
+  lineNumbers:true
+});
+myCodeMirror.markText({line:1,ch:0},{line:1},{className:'aaa'});
+for(var i=0;i<myCodeMirror.lineCount();i++){
+	//alert(myCodeMirror.getLine(i));
+}
+}
+aaa();
+</script>
+
+</html>

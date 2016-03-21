@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://pub.service.vil.m3.mvdis.gov/" name="PhoneViolationService" targetNamespace="http://pub.service.vil.m3.mvdis.gov/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://pub.service.vil.m3.mvdis.gov/" elementFormDefault="unqualified" targetNamespace="http://pub.service.vil.m3.mvdis.gov/" version="1.0">
+
+  <xs:element name="searchTotalPenaltyByLegalPerson" type="tns:searchTotalPenaltyByLegalPerson"/>
+
+  <xs:element name="searchTotalPenaltyByLegalPersonResponse" type="tns:searchTotalPenaltyByLegalPersonResponse"/>
+
+  <xs:element name="searchTotalPenaltyByLegalPersonRestrict" type="tns:searchTotalPenaltyByLegalPersonRestrict"/>
+
+  <xs:element name="searchTotalPenaltyByLegalPersonRestrictResponse" type="tns:searchTotalPenaltyByLegalPersonRestrictResponse"/>
+
+  <xs:element name="searchTotalPenaltyByNaturalPerson" type="tns:searchTotalPenaltyByNaturalPerson"/>
+
+  <xs:element name="searchTotalPenaltyByNaturalPersonResponse" type="tns:searchTotalPenaltyByNaturalPersonResponse"/>
+
+  <xs:element name="searchTotalPenaltyByNaturalPersonRestrict" type="tns:searchTotalPenaltyByNaturalPersonRestrict"/>
+
+  <xs:element name="searchTotalPenaltyByNaturalPersonRestrictResponse" type="tns:searchTotalPenaltyByNaturalPersonRestrictResponse"/>
+
+  <xs:complexType name="searchTotalPenaltyByLegalPerson">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="driverId" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchTotalPenaltyByLegalPersonResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchTotalPenaltyByNaturalPerson">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="driverId" type="xs:string"/>
+      <xs:element minOccurs="0" name="birthday" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchTotalPenaltyByNaturalPersonResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchTotalPenaltyByNaturalPersonRestrict">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="driverId" type="xs:string"/>
+      <xs:element minOccurs="0" name="birthday" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchTotalPenaltyByNaturalPersonRestrictResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchTotalPenaltyByLegalPersonRestrict">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="driverId" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchTotalPenaltyByLegalPersonRestrictResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="searchTotalPenaltyByLegalPersonRestrictResponse">
+    <wsdl:part element="ns1:searchTotalPenaltyByLegalPersonRestrictResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchTotalPenaltyByLegalPersonRestrict">
+    <wsdl:part element="ns1:searchTotalPenaltyByLegalPersonRestrict" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchTotalPenaltyByNaturalPersonRestrict">
+    <wsdl:part element="ns1:searchTotalPenaltyByNaturalPersonRestrict" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchTotalPenaltyByNaturalPerson">
+    <wsdl:part element="ns1:searchTotalPenaltyByNaturalPerson" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchTotalPenaltyByLegalPersonResponse">
+    <wsdl:part element="ns1:searchTotalPenaltyByLegalPersonResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchTotalPenaltyByLegalPerson">
+    <wsdl:part element="ns1:searchTotalPenaltyByLegalPerson" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchTotalPenaltyByNaturalPersonRestrictResponse">
+    <wsdl:part element="ns1:searchTotalPenaltyByNaturalPersonRestrictResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchTotalPenaltyByNaturalPersonResponse">
+    <wsdl:part element="ns1:searchTotalPenaltyByNaturalPersonResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="PhoneViolationService">
+    <wsdl:operation name="searchTotalPenaltyByLegalPerson">
+      <wsdl:input message="ns1:searchTotalPenaltyByLegalPerson" name="searchTotalPenaltyByLegalPerson">
+    </wsdl:input>
+      <wsdl:output message="ns1:searchTotalPenaltyByLegalPersonResponse" name="searchTotalPenaltyByLegalPersonResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchTotalPenaltyByNaturalPerson">
+      <wsdl:input message="ns1:searchTotalPenaltyByNaturalPerson" name="searchTotalPenaltyByNaturalPerson">
+    </wsdl:input>
+      <wsdl:output message="ns1:searchTotalPenaltyByNaturalPersonResponse" name="searchTotalPenaltyByNaturalPersonResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchTotalPenaltyByNaturalPersonRestrict">
+      <wsdl:input message="ns1:searchTotalPenaltyByNaturalPersonRestrict" name="searchTotalPenaltyByNaturalPersonRestrict">
+    </wsdl:input>
+      <wsdl:output message="ns1:searchTotalPenaltyByNaturalPersonRestrictResponse" name="searchTotalPenaltyByNaturalPersonRestrictResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchTotalPenaltyByLegalPersonRestrict">
+      <wsdl:input message="ns1:searchTotalPenaltyByLegalPersonRestrict" name="searchTotalPenaltyByLegalPersonRestrict">
+    </wsdl:input>
+      <wsdl:output message="ns1:searchTotalPenaltyByLegalPersonRestrictResponse" name="searchTotalPenaltyByLegalPersonRestrictResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

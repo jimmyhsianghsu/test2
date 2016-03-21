@@ -1,0 +1,457 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://pub.service.vil.m3.mvdis.gov/" name="TpeAdjViolationService" targetNamespace="http://pub.service.vil.m3.mvdis.gov/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://pub.service.vil.m3.mvdis.gov/" elementFormDefault="unqualified" targetNamespace="http://pub.service.vil.m3.mvdis.gov/" version="1.0">
+
+  <xs:element name="adjustViolation" type="tns:adjustViolation"/>
+
+  <xs:element name="adjustViolationResponse" type="tns:adjustViolationResponse"/>
+
+  <xs:element name="getAdjViolationByCar" type="tns:getAdjViolationByCar"/>
+
+  <xs:element name="getAdjViolationByCarResponse" type="tns:getAdjViolationByCarResponse"/>
+
+  <xs:element name="getAdjViolationByPerson" type="tns:getAdjViolationByPerson"/>
+
+  <xs:element name="getAdjViolationByPersonResponse" type="tns:getAdjViolationByPersonResponse"/>
+
+  <xs:element name="getAdjViolationByTicket" type="tns:getAdjViolationByTicket"/>
+
+  <xs:element name="getAdjViolationByTicketResponse" type="tns:getAdjViolationByTicketResponse"/>
+
+  <xs:element name="receiveAdjViolation" type="tns:receiveAdjViolation"/>
+
+  <xs:element name="receiveAdjViolationResponse" type="tns:receiveAdjViolationResponse"/>
+
+  <xs:element name="searchAdjPayment" type="tns:searchAdjPayment"/>
+
+  <xs:element name="searchAdjPaymentResponse" type="tns:searchAdjPaymentResponse"/>
+
+  <xs:element name="searchAdjPermByPerson" type="tns:searchAdjPermByPerson"/>
+
+  <xs:element name="searchAdjPermByPersonResponse" type="tns:searchAdjPermByPersonResponse"/>
+
+  <xs:element name="searchAdjRemedyByTicket" type="tns:searchAdjRemedyByTicket"/>
+
+  <xs:element name="searchAdjRemedyByTicketResponse" type="tns:searchAdjRemedyByTicketResponse"/>
+
+  <xs:element name="setAdjNum" type="tns:setAdjNum"/>
+
+  <xs:element name="setAdjNumResponse" type="tns:setAdjNumResponse"/>
+
+  <xs:complexType name="adjustViolation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:tpeAdjViolationOuterObject"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="tpeAdjViolationOuterObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="accuseNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="accuseType" type="xs:string"/>
+      <xs:element minOccurs="0" name="adjDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="adjNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="adjState" type="xs:string"/>
+      <xs:element minOccurs="0" name="adjudicator" type="xs:string"/>
+      <xs:element minOccurs="0" name="arriveDmv" type="xs:string"/>
+      <xs:element minOccurs="0" name="arrivedDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="birthday" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="carKind" type="xs:string"/>
+      <xs:element minOccurs="0" name="caseFlag" type="xs:string"/>
+      <xs:element minOccurs="0" name="clearDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="closeNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="countNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="createDmv" type="xs:string"/>
+      <xs:element minOccurs="0" name="createUid" type="xs:string"/>
+      <xs:element minOccurs="0" name="dmv" type="xs:string"/>
+      <xs:element minOccurs="0" name="driverAddr" type="xs:string"/>
+      <xs:element minOccurs="0" name="driverId" type="xs:string"/>
+      <xs:element minOccurs="0" name="driverKind" type="xs:string"/>
+      <xs:element minOccurs="0" name="driverName" type="xs:string"/>
+      <xs:element minOccurs="0" name="handleDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="handleState" type="xs:string"/>
+      <xs:element minOccurs="0" name="holdNo" type="xs:string"/>
+      <xs:element name="layaway" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="location" type="xs:string"/>
+      <xs:element minOccurs="0" name="markNo" type="xs:string"/>
+      <xs:element name="needArrive" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="payAccount" type="xs:string"/>
+      <xs:element minOccurs="0" name="payWay" type="xs:string"/>
+      <xs:element name="payment" type="xs:int"/>
+      <xs:element name="penalty" type="xs:int"/>
+      <xs:element name="penaltyAmount" type="xs:int"/>
+      <xs:element minOccurs="0" name="permAddress" type="xs:string"/>
+      <xs:element minOccurs="0" name="permZip" type="xs:string"/>
+      <xs:element minOccurs="0" name="plateNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="receiveDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="receiveState" type="xs:string"/>
+      <xs:element minOccurs="0" name="remedyDate" type="xs:dateTime"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="remedyDetail" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="remedyDoc" type="xs:string"/>
+      <xs:element minOccurs="0" name="remedyState" type="xs:string"/>
+      <xs:element minOccurs="0" name="respTp" type="xs:string"/>
+      <xs:element name="rule" type="xs:int"/>
+      <xs:element minOccurs="0" name="rule1" type="xs:string"/>
+      <xs:element minOccurs="0" name="rule2" type="xs:string"/>
+      <xs:element minOccurs="0" name="rule3" type="xs:string"/>
+      <xs:element minOccurs="0" name="rule4" type="xs:string"/>
+      <xs:element minOccurs="0" name="suspBeginDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="suspEndDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="suspStatus" type="xs:string"/>
+      <xs:element name="transfer" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="updateDmv" type="xs:string"/>
+      <xs:element minOccurs="0" name="updateTime" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="updateUid" type="xs:string"/>
+      <xs:element minOccurs="0" name="vanStatus" type="xs:string"/>
+      <xs:element minOccurs="0" name="vehKind" type="xs:string"/>
+      <xs:element minOccurs="0" name="vilAddrNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="vilDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="vilFact" type="xs:string"/>
+      <xs:element minOccurs="0" name="vilInDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="vilKind" type="xs:string"/>
+      <xs:element minOccurs="0" name="vilTicket" type="xs:string"/>
+      <xs:element minOccurs="0" name="vilType" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="adjustViolationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:tpeAdjViolationOuterObject"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchAdjPayment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ticket" type="xs:string"/>
+      <xs:element minOccurs="0" name="plateNo" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchAdjPaymentResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:vilFeeSearchEntityOuter"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="vilFeeSearchEntityOuter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="acntDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="closeNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="payWayNo" type="xs:string"/>
+      <xs:element name="payment" type="xs:int"/>
+      <xs:element minOccurs="0" name="plateNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="vilTicket" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getAdjViolationByCar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="plateNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="vehKind" type="xs:string"/>
+      <xs:element minOccurs="0" name="station" type="xs:string"/>
+      <xs:element minOccurs="0" name="closeStatus" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getAdjViolationByCarResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:tpeAdjOuterViolation"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="tpeAdjOuterViolation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="accuseNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="adjNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="arriveDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="closeNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="counterNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="createDmv" type="xs:string"/>
+      <xs:element minOccurs="0" name="createUid" type="xs:string"/>
+      <xs:element minOccurs="0" name="driverId" type="xs:string"/>
+      <xs:element minOccurs="0" name="holdNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="inDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="isAdjudged" type="xs:string"/>
+      <xs:element minOccurs="0" name="isForced" type="xs:string"/>
+      <xs:element name="notPayment" type="xs:int"/>
+      <xs:element minOccurs="0" name="payWayNo" type="xs:string"/>
+      <xs:element name="payment" type="xs:int"/>
+      <xs:element name="penalty" type="xs:int"/>
+      <xs:element minOccurs="0" name="plateNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="receiveDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="respPeopleType" type="xs:string"/>
+      <xs:element name="rule1No" type="xs:int"/>
+      <xs:element name="rule2No" type="xs:int"/>
+      <xs:element name="rule3No" type="xs:int"/>
+      <xs:element minOccurs="0" name="upDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="updateDmv" type="xs:string"/>
+      <xs:element minOccurs="0" name="updateUid" type="xs:string"/>
+      <xs:element minOccurs="0" name="vehicleKindNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="vilAddressNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="vilDt" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="vilTicket" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getAdjViolationByTicket">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ticket" type="xs:string"/>
+      <xs:element minOccurs="0" name="plateNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="station" type="xs:string"/>
+      <xs:element minOccurs="0" name="closeStatus" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getAdjViolationByTicketResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:tpeAdjOuterViolation"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getAdjViolationByPerson">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="driverId" type="xs:string"/>
+      <xs:element minOccurs="0" name="birthday" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="station" type="xs:string"/>
+      <xs:element minOccurs="0" name="closeStatus" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getAdjViolationByPersonResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:tpeAdjOuterViolation"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="receiveAdjViolation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:vilRcvHisOuter"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="vilRcvHisOuter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="carPlateNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyId" type="xs:string"/>
+      <xs:element minOccurs="0" name="dmv" type="xs:string"/>
+      <xs:element minOccurs="0" name="driverId" type="xs:string"/>
+      <xs:element minOccurs="0" name="plateNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="rcvDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="rcvDateStr" type="xs:string"/>
+      <xs:element minOccurs="0" name="rcvDoc" type="xs:string"/>
+      <xs:element minOccurs="0" name="rcvState" type="xs:string"/>
+      <xs:element minOccurs="0" name="rcvType" type="xs:string"/>
+      <xs:element minOccurs="0" name="updateDmv" type="xs:string"/>
+      <xs:element minOccurs="0" name="updateDt" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="updateUid" type="xs:string"/>
+      <xs:element minOccurs="0" name="vehicleKindNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="vilTicket" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="receiveAdjViolationResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchAdjPermByPerson">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="driverId" type="xs:string"/>
+      <xs:element minOccurs="0" name="birthday" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchAdjPermByPersonResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:vilHumanOuter"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="vilHumanOuter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="birthday" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="idNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="name" type="xs:string"/>
+      <xs:element minOccurs="0" name="permAddr" type="xs:string"/>
+      <xs:element minOccurs="0" name="zipCode" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="setAdjNum">
+    <xs:sequence>
+      <xs:element name="postOffice" type="xs:int"/>
+      <xs:element name="returnCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="userId" type="xs:string"/>
+      <xs:element minOccurs="0" name="adjNo" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="setAdjNumResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchAdjRemedyByTicket">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ticket" type="xs:string"/>
+      <xs:element minOccurs="0" name="plateNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="station" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchAdjRemedyByTicketResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:vilRemedyOuter"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="vilRemedyOuter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dmv" type="xs:string"/>
+      <xs:element minOccurs="0" name="handleDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="handleState" type="xs:string"/>
+      <xs:element minOccurs="0" name="idNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="plateNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="remedyDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="remedyDoc" type="xs:string"/>
+      <xs:element minOccurs="0" name="remedyId" type="xs:long"/>
+      <xs:element minOccurs="0" name="remedyState" type="xs:string"/>
+      <xs:element minOccurs="0" name="updateDt" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="updateUid" type="xs:string"/>
+      <xs:element minOccurs="0" name="vehicleKindNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="vilTicket" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="receiveAdjViolationResponse">
+    <wsdl:part element="ns1:receiveAdjViolationResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchAdjRemedyByTicketResponse">
+    <wsdl:part element="ns1:searchAdjRemedyByTicketResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchAdjPermByPersonResponse">
+    <wsdl:part element="ns1:searchAdjPermByPersonResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAdjViolationByPerson">
+    <wsdl:part element="ns1:getAdjViolationByPerson" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAdjViolationByCarResponse">
+    <wsdl:part element="ns1:getAdjViolationByCarResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="receiveAdjViolation">
+    <wsdl:part element="ns1:receiveAdjViolation" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setAdjNumResponse">
+    <wsdl:part element="ns1:setAdjNumResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="adjustViolationResponse">
+    <wsdl:part element="ns1:adjustViolationResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAdjViolationByCar">
+    <wsdl:part element="ns1:getAdjViolationByCar" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAdjViolationByTicketResponse">
+    <wsdl:part element="ns1:getAdjViolationByTicketResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setAdjNum">
+    <wsdl:part element="ns1:setAdjNum" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchAdjPaymentResponse">
+    <wsdl:part element="ns1:searchAdjPaymentResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAdjViolationByTicket">
+    <wsdl:part element="ns1:getAdjViolationByTicket" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchAdjRemedyByTicket">
+    <wsdl:part element="ns1:searchAdjRemedyByTicket" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchAdjPayment">
+    <wsdl:part element="ns1:searchAdjPayment" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchAdjPermByPerson">
+    <wsdl:part element="ns1:searchAdjPermByPerson" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAdjViolationByPersonResponse">
+    <wsdl:part element="ns1:getAdjViolationByPersonResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="adjustViolation">
+    <wsdl:part element="ns1:adjustViolation" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="TpeAdjViolationService">
+    <wsdl:operation name="adjustViolation">
+      <wsdl:input message="ns1:adjustViolation" name="adjustViolation">
+    </wsdl:input>
+      <wsdl:output message="ns1:adjustViolationResponse" name="adjustViolationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchAdjPayment">
+      <wsdl:input message="ns1:searchAdjPayment" name="searchAdjPayment">
+    </wsdl:input>
+      <wsdl:output message="ns1:searchAdjPaymentResponse" name="searchAdjPaymentResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAdjViolationByCar">
+      <wsdl:input message="ns1:getAdjViolationByCar" name="getAdjViolationByCar">
+    </wsdl:input>
+      <wsdl:output message="ns1:getAdjViolationByCarResponse" name="getAdjViolationByCarResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAdjViolationByTicket">
+      <wsdl:input message="ns1:getAdjViolationByTicket" name="getAdjViolationByTicket">
+    </wsdl:input>
+      <wsdl:output message="ns1:getAdjViolationByTicketResponse" name="getAdjViolationByTicketResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAdjViolationByPerson">
+      <wsdl:input message="ns1:getAdjViolationByPerson" name="getAdjViolationByPerson">
+    </wsdl:input>
+      <wsdl:output message="ns1:getAdjViolationByPersonResponse" name="getAdjViolationByPersonResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="receiveAdjViolation">
+      <wsdl:input message="ns1:receiveAdjViolation" name="receiveAdjViolation">
+    </wsdl:input>
+      <wsdl:output message="ns1:receiveAdjViolationResponse" name="receiveAdjViolationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchAdjPermByPerson">
+      <wsdl:input message="ns1:searchAdjPermByPerson" name="searchAdjPermByPerson">
+    </wsdl:input>
+      <wsdl:output message="ns1:searchAdjPermByPersonResponse" name="searchAdjPermByPersonResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setAdjNum">
+      <wsdl:input message="ns1:setAdjNum" name="setAdjNum">
+    </wsdl:input>
+      <wsdl:output message="ns1:setAdjNumResponse" name="setAdjNumResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchAdjRemedyByTicket">
+      <wsdl:input message="ns1:searchAdjRemedyByTicket" name="searchAdjRemedyByTicket">
+    </wsdl:input>
+      <wsdl:output message="ns1:searchAdjRemedyByTicketResponse" name="searchAdjRemedyByTicketResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

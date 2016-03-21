@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://service.vil.m3.mvdis.gov" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:ns1="http://pub.service.vil.m3.mvdis.gov/" name="PolViolationService" targetNamespace="http://service.vil.m3.mvdis.gov">
+  <wsdl:import location="PolViolationService2.xml" namespace="http://pub.service.vil.m3.mvdis.gov/">
+    </wsdl:import>
+  <wsdl:binding name="PolViolationServiceSoapBinding" type="ns1:PolViolationService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="searchPolViolationByCar">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchPolViolationByCar">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchPolViolationByCarResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchPolViolationByPerson">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchPolViolationByPerson">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchPolViolationByPersonResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchPolCarViolation">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchPolCarViolation">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchPolCarViolationResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="savePolViolation">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="savePolViolation">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="savePolViolationResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="savePolViolationDeprecated">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="savePolViolationDeprecated">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="savePolViolationDeprecatedResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PolViolationService">
+    <wsdl:port binding="tns:PolViolationServiceSoapBinding" name="PolViolationServiceImplPort">
+      <soap:address location="http://localhost:8081/m3-service/vil/vil001/s003"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

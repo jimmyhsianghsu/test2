@@ -1,0 +1,1267 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://pub.service.vil.m3.mvdis.gov/" name="EmvViolationService" targetNamespace="http://pub.service.vil.m3.mvdis.gov/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://pub.service.vil.m3.mvdis.gov/" elementFormDefault="unqualified" targetNamespace="http://pub.service.vil.m3.mvdis.gov/" version="1.0">
+
+  <xs:element name="searchDriverMarkPoint" type="tns:searchDriverMarkPoint"/>
+
+  <xs:element name="searchDriverMarkPointResponse" type="tns:searchDriverMarkPointResponse"/>
+
+  <xs:element name="searchLegalPersonPaymentByIdPlateCount" type="tns:searchLegalPersonPaymentByIdPlateCount"/>
+
+  <xs:element name="searchLegalPersonPaymentByIdPlateCountResponse" type="tns:searchLegalPersonPaymentByIdPlateCountResponse"/>
+
+  <xs:element name="searchLegalPersonPaymentByIdPlatePage" type="tns:searchLegalPersonPaymentByIdPlatePage"/>
+
+  <xs:element name="searchLegalPersonPaymentByIdPlatePageResponse" type="tns:searchLegalPersonPaymentByIdPlatePageResponse"/>
+
+  <xs:element name="searchLegalPersonPaymentByIdTicketPlateCount" type="tns:searchLegalPersonPaymentByIdTicketPlateCount"/>
+
+  <xs:element name="searchLegalPersonPaymentByIdTicketPlateCountResponse" type="tns:searchLegalPersonPaymentByIdTicketPlateCountResponse"/>
+
+  <xs:element name="searchLegalPersonPaymentByIdTicketPlatePage" type="tns:searchLegalPersonPaymentByIdTicketPlatePage"/>
+
+  <xs:element name="searchLegalPersonPaymentByIdTicketPlatePageResponse" type="tns:searchLegalPersonPaymentByIdTicketPlatePageResponse"/>
+
+  <xs:element name="searchLegalPersonPenaltyByIdPlateCount" type="tns:searchLegalPersonPenaltyByIdPlateCount"/>
+
+  <xs:element name="searchLegalPersonPenaltyByIdPlateCountResponse" type="tns:searchLegalPersonPenaltyByIdPlateCountResponse"/>
+
+  <xs:element name="searchLegalPersonPenaltyByIdPlatePage" type="tns:searchLegalPersonPenaltyByIdPlatePage"/>
+
+  <xs:element name="searchLegalPersonPenaltyByIdPlatePageResponse" type="tns:searchLegalPersonPenaltyByIdPlatePageResponse"/>
+
+  <xs:element name="searchLegalPersonPenaltyByIdTicketPlateCount" type="tns:searchLegalPersonPenaltyByIdTicketPlateCount"/>
+
+  <xs:element name="searchLegalPersonPenaltyByIdTicketPlateCountResponse" type="tns:searchLegalPersonPenaltyByIdTicketPlateCountResponse"/>
+
+  <xs:element name="searchLegalPersonPenaltyByIdTicketPlatePage" type="tns:searchLegalPersonPenaltyByIdTicketPlatePage"/>
+
+  <xs:element name="searchLegalPersonPenaltyByIdTicketPlatePageResponse" type="tns:searchLegalPersonPenaltyByIdTicketPlatePageResponse"/>
+
+  <xs:element name="searchMarkByDriver" type="tns:searchMarkByDriver"/>
+
+  <xs:element name="searchMarkByDriverResponse" type="tns:searchMarkByDriverResponse"/>
+
+  <xs:element name="searchMarkByLegalPersonCount" type="tns:searchMarkByLegalPersonCount"/>
+
+  <xs:element name="searchMarkByLegalPersonCountResponse" type="tns:searchMarkByLegalPersonCountResponse"/>
+
+  <xs:element name="searchMarkByLegalPersonPage" type="tns:searchMarkByLegalPersonPage"/>
+
+  <xs:element name="searchMarkByLegalPersonPageResponse" type="tns:searchMarkByLegalPersonPageResponse"/>
+
+  <xs:element name="searchMarkByNaturalPersonCount" type="tns:searchMarkByNaturalPersonCount"/>
+
+  <xs:element name="searchMarkByNaturalPersonCountResponse" type="tns:searchMarkByNaturalPersonCountResponse"/>
+
+  <xs:element name="searchMarkByNaturalPersonPage" type="tns:searchMarkByNaturalPersonPage"/>
+
+  <xs:element name="searchMarkByNaturalPersonPageResponse" type="tns:searchMarkByNaturalPersonPageResponse"/>
+
+  <xs:element name="searchPaymentByLegalPerson" type="tns:searchPaymentByLegalPerson"/>
+
+  <xs:element name="searchPaymentByLegalPersonCount" type="tns:searchPaymentByLegalPersonCount"/>
+
+  <xs:element name="searchPaymentByLegalPersonCountResponse" type="tns:searchPaymentByLegalPersonCountResponse"/>
+
+  <xs:element name="searchPaymentByLegalPersonResponse" type="tns:searchPaymentByLegalPersonResponse"/>
+
+  <xs:element name="searchPaymentByNaturalPerson" type="tns:searchPaymentByNaturalPerson"/>
+
+  <xs:element name="searchPaymentByNaturalPersonCount" type="tns:searchPaymentByNaturalPersonCount"/>
+
+  <xs:element name="searchPaymentByNaturalPersonCountResponse" type="tns:searchPaymentByNaturalPersonCountResponse"/>
+
+  <xs:element name="searchPaymentByNaturalPersonResponse" type="tns:searchPaymentByNaturalPersonResponse"/>
+
+  <xs:element name="searchPenaltyByLegalPerson" type="tns:searchPenaltyByLegalPerson"/>
+
+  <xs:element name="searchPenaltyByLegalPersonCount" type="tns:searchPenaltyByLegalPersonCount"/>
+
+  <xs:element name="searchPenaltyByLegalPersonCountResponse" type="tns:searchPenaltyByLegalPersonCountResponse"/>
+
+  <xs:element name="searchPenaltyByLegalPersonCountRestrict" type="tns:searchPenaltyByLegalPersonCountRestrict"/>
+
+  <xs:element name="searchPenaltyByLegalPersonCountRestrictResponse" type="tns:searchPenaltyByLegalPersonCountRestrictResponse"/>
+
+  <xs:element name="searchPenaltyByLegalPersonResponse" type="tns:searchPenaltyByLegalPersonResponse"/>
+
+  <xs:element name="searchPenaltyByLegalPersonRestrict" type="tns:searchPenaltyByLegalPersonRestrict"/>
+
+  <xs:element name="searchPenaltyByLegalPersonRestrictResponse" type="tns:searchPenaltyByLegalPersonRestrictResponse"/>
+
+  <xs:element name="searchPenaltyByNaturalPerson" type="tns:searchPenaltyByNaturalPerson"/>
+
+  <xs:element name="searchPenaltyByNaturalPersonCount" type="tns:searchPenaltyByNaturalPersonCount"/>
+
+  <xs:element name="searchPenaltyByNaturalPersonCountResponse" type="tns:searchPenaltyByNaturalPersonCountResponse"/>
+
+  <xs:element name="searchPenaltyByNaturalPersonCountRestrict" type="tns:searchPenaltyByNaturalPersonCountRestrict"/>
+
+  <xs:element name="searchPenaltyByNaturalPersonCountRestrictResponse" type="tns:searchPenaltyByNaturalPersonCountRestrictResponse"/>
+
+  <xs:element name="searchPenaltyByNaturalPersonResponse" type="tns:searchPenaltyByNaturalPersonResponse"/>
+
+  <xs:element name="searchPenaltyByNaturalPersonRestrict" type="tns:searchPenaltyByNaturalPersonRestrict"/>
+
+  <xs:element name="searchPenaltyByNaturalPersonRestrictResponse" type="tns:searchPenaltyByNaturalPersonRestrictResponse"/>
+
+  <xs:element name="searchPlateMarkPoint" type="tns:searchPlateMarkPoint"/>
+
+  <xs:element name="searchPlateMarkPointResponse" type="tns:searchPlateMarkPointResponse"/>
+
+  <xs:element name="searchRepealDataByCarCount" type="tns:searchRepealDataByCarCount"/>
+
+  <xs:element name="searchRepealDataByCarCountResponse" type="tns:searchRepealDataByCarCountResponse"/>
+
+  <xs:element name="searchSuspDriverLicence" type="tns:searchSuspDriverLicence"/>
+
+  <xs:element name="searchSuspDriverLicenceResponse" type="tns:searchSuspDriverLicenceResponse"/>
+
+  <xs:element name="searchSuspPlate" type="tns:searchSuspPlate"/>
+
+  <xs:element name="searchSuspPlateResponse" type="tns:searchSuspPlateResponse"/>
+
+  <xs:element name="searchVehViolationCount" type="tns:searchVehViolationCount"/>
+
+  <xs:element name="searchVehViolationCountResponse" type="tns:searchVehViolationCountResponse"/>
+
+  <xs:element name="searchViolationByTicketPerson" type="tns:searchViolationByTicketPerson"/>
+
+  <xs:element name="searchViolationByTicketPersonPlate" type="tns:searchViolationByTicketPersonPlate"/>
+
+  <xs:element name="searchViolationByTicketPersonPlateResponse" type="tns:searchViolationByTicketPersonPlateResponse"/>
+
+  <xs:element name="searchViolationByTicketPersonResponse" type="tns:searchViolationByTicketPersonResponse"/>
+
+  <xs:element name="searchWineVilList" type="tns:searchWineVilList"/>
+
+  <xs:element name="searchWineVilListByTRP" type="tns:searchWineVilListByTRP"/>
+
+  <xs:element name="searchWineVilListByTRPResponse" type="tns:searchWineVilListByTRPResponse"/>
+
+  <xs:element name="searchWineVilListResponse" type="tns:searchWineVilListResponse"/>
+
+  <xs:element name="updateViolation" type="tns:updateViolation"/>
+
+  <xs:element name="updateViolationResponse" type="tns:updateViolationResponse"/>
+
+  <xs:complexType name="updateViolation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:emvViolationOuterObject"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="emvViolationOuterObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="accuseNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="accuseType" type="xs:string"/>
+      <xs:element minOccurs="0" name="adjDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="adjNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="adjState" type="xs:string"/>
+      <xs:element minOccurs="0" name="adjudicator" type="xs:string"/>
+      <xs:element minOccurs="0" name="arriveDmv" type="xs:string"/>
+      <xs:element minOccurs="0" name="arrivedDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="bankCheckDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="birthday" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="carKind" type="xs:string"/>
+      <xs:element minOccurs="0" name="cardNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="caseFlag" type="xs:string"/>
+      <xs:element minOccurs="0" name="clearDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="closeNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="countNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="createDmv" type="xs:string"/>
+      <xs:element minOccurs="0" name="createUid" type="xs:string"/>
+      <xs:element minOccurs="0" name="debug1" type="xs:string"/>
+      <xs:element minOccurs="0" name="debug2" type="xs:string"/>
+      <xs:element minOccurs="0" name="debug3" type="xs:string"/>
+      <xs:element minOccurs="0" name="debug4" type="xs:string"/>
+      <xs:element minOccurs="0" name="debug5" type="xs:string"/>
+      <xs:element minOccurs="0" name="debug6" type="xs:string"/>
+      <xs:element minOccurs="0" name="dmv" type="xs:string"/>
+      <xs:element minOccurs="0" name="driverAddr" type="xs:string"/>
+      <xs:element minOccurs="0" name="driverId" type="xs:string"/>
+      <xs:element minOccurs="0" name="driverKind" type="xs:string"/>
+      <xs:element minOccurs="0" name="driverName" type="xs:string"/>
+      <xs:element minOccurs="0" name="handleDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="handleState" type="xs:string"/>
+      <xs:element minOccurs="0" name="holdNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="isAdjudged" type="xs:string"/>
+      <xs:element name="layaway" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="location" type="xs:string"/>
+      <xs:element minOccurs="0" name="markNo" type="xs:string"/>
+      <xs:element name="needArrive" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="payAccount" type="xs:string"/>
+      <xs:element minOccurs="0" name="payWay" type="xs:string"/>
+      <xs:element name="payment" type="xs:int"/>
+      <xs:element name="penalty" type="xs:int"/>
+      <xs:element name="penaltyAmount" type="xs:int"/>
+      <xs:element minOccurs="0" name="penaltyMode" type="xs:string"/>
+      <xs:element minOccurs="0" name="permAddress" type="xs:string"/>
+      <xs:element minOccurs="0" name="permZip" type="xs:string"/>
+      <xs:element minOccurs="0" name="plateNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="receiveDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="receiveState" type="xs:string"/>
+      <xs:element minOccurs="0" name="remedyDate" type="xs:dateTime"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="remedyDetail" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="remedyDoc" type="xs:string"/>
+      <xs:element minOccurs="0" name="remedyState" type="xs:string"/>
+      <xs:element minOccurs="0" name="respTp" type="xs:string"/>
+      <xs:element name="rule" type="xs:int"/>
+      <xs:element minOccurs="0" name="rule1" type="xs:string"/>
+      <xs:element minOccurs="0" name="rule2" type="xs:string"/>
+      <xs:element minOccurs="0" name="rule3" type="xs:string"/>
+      <xs:element minOccurs="0" name="rule4" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="ruleList" nillable="true" type="tns:serviceMapEntryArray"/>
+      <xs:element minOccurs="0" name="suspBeginDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="suspEndDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="suspStatus" type="xs:string"/>
+      <xs:element minOccurs="0" name="transDate" type="xs:dateTime"/>
+      <xs:element name="transfer" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="updateDmv" type="xs:string"/>
+      <xs:element minOccurs="0" name="updateTime" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="updateUid" type="xs:string"/>
+      <xs:element minOccurs="0" name="vanStatus" type="xs:string"/>
+      <xs:element minOccurs="0" name="vehKind" type="xs:string"/>
+      <xs:element minOccurs="0" name="vilAddrNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="vilDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="vilFact" type="xs:string"/>
+      <xs:element minOccurs="0" name="vilInDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="vilKind" type="xs:string"/>
+      <xs:element minOccurs="0" name="vilTicket" type="xs:string"/>
+      <xs:element minOccurs="0" name="vilType" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="serviceMapEntry">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="key" type="xs:anyType"/>
+      <xs:element minOccurs="0" name="value" type="xs:anyType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="serviceMap">
+    <xs:complexContent>
+      <xs:extension base="tns:hashMap">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="hashMap">
+    <xs:complexContent>
+      <xs:extension base="tns:abstractMap">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType abstract="true" name="abstractMap">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="updateViolationResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchMarkByNaturalPersonCount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="driverId" type="xs:string"/>
+      <xs:element minOccurs="0" name="birthday" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchMarkByNaturalPersonCountResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchVehViolationCount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="plateNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="vehKind" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchVehViolationCountResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchPenaltyByNaturalPersonCount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="driverId" type="xs:string"/>
+      <xs:element minOccurs="0" name="birthday" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchPenaltyByNaturalPersonCountResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchLegalPersonPaymentByIdTicketPlateCount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="companyId" type="xs:string"/>
+      <xs:element minOccurs="0" name="ticket" type="xs:string"/>
+      <xs:element minOccurs="0" name="plate" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchLegalPersonPaymentByIdTicketPlateCountResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchRepealDataByCarCount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="plateNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="vehKind" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchRepealDataByCarCountResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchPaymentByLegalPerson">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="driverId" type="xs:string"/>
+      <xs:element minOccurs="0" name="rowStart" type="xs:int"/>
+      <xs:element minOccurs="0" name="rowEnd" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchPaymentByLegalPersonResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:emvViolationOuterObject"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchMarkByLegalPersonCount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="driverId" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchMarkByLegalPersonCountResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchPenaltyByLegalPersonCount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="driverId" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchPenaltyByLegalPersonCountResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchPaymentByLegalPersonCount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="driverId" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchPaymentByLegalPersonCountResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchMarkByDriver">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="driverId" type="xs:string"/>
+      <xs:element minOccurs="0" name="birthday" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchMarkByDriverResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:emvViolationOuterObject"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchLegalPersonPaymentByIdPlatePage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="companyId" type="xs:string"/>
+      <xs:element minOccurs="0" name="plate" type="xs:string"/>
+      <xs:element minOccurs="0" name="rowStart" type="xs:int"/>
+      <xs:element minOccurs="0" name="rowEnd" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchLegalPersonPaymentByIdPlatePageResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:emvViolationOuterObject"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchDriverMarkPoint">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="driverId" type="xs:string"/>
+      <xs:element minOccurs="0" name="birthday" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="vehKind" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchDriverMarkPointResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchMarkByLegalPersonPage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="driverId" type="xs:string"/>
+      <xs:element minOccurs="0" name="rowStart" type="xs:int"/>
+      <xs:element minOccurs="0" name="rowEnd" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchMarkByLegalPersonPageResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:emvViolationOuterObject"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchPenaltyByNaturalPersonRestrict">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="driverId" type="xs:string"/>
+      <xs:element minOccurs="0" name="birthday" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="rowStart" type="xs:int"/>
+      <xs:element minOccurs="0" name="rowEnd" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchPenaltyByNaturalPersonRestrictResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:emvViolationOuterObject"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchMarkByNaturalPersonPage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="driverId" type="xs:string"/>
+      <xs:element minOccurs="0" name="birthday" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="rowStart" type="xs:int"/>
+      <xs:element minOccurs="0" name="rowEnd" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchMarkByNaturalPersonPageResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:emvViolationOuterObject"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchLegalPersonPaymentByIdTicketPlatePage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="companyId" type="xs:string"/>
+      <xs:element minOccurs="0" name="ticket" type="xs:string"/>
+      <xs:element minOccurs="0" name="plate" type="xs:string"/>
+      <xs:element minOccurs="0" name="rowStart" type="xs:int"/>
+      <xs:element minOccurs="0" name="rowEnd" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchLegalPersonPaymentByIdTicketPlatePageResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:emvViolationOuterObject"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchWineVilList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="driverId" type="xs:string"/>
+      <xs:element minOccurs="0" name="birthday" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchWineVilListResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:emvViolationOuterObject"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchPenaltyByLegalPersonRestrict">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="driverId" type="xs:string"/>
+      <xs:element minOccurs="0" name="rowStart" type="xs:int"/>
+      <xs:element minOccurs="0" name="rowEnd" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchPenaltyByLegalPersonRestrictResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:emvViolationOuterObject"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchPenaltyByLegalPersonCountRestrict">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="driverId" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchPenaltyByLegalPersonCountRestrictResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchLegalPersonPenaltyByIdPlatePage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="companyId" type="xs:string"/>
+      <xs:element minOccurs="0" name="plate" type="xs:string"/>
+      <xs:element name="canPay" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="rowStart" type="xs:int"/>
+      <xs:element minOccurs="0" name="rowEnd" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchLegalPersonPenaltyByIdPlatePageResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:emvViolationOuterObject"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchViolationByTicketPersonPlate">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="vilTicket" type="xs:string"/>
+      <xs:element minOccurs="0" name="driverId" type="xs:string"/>
+      <xs:element minOccurs="0" name="birthday" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="plateNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="vehKind" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchViolationByTicketPersonPlateResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:emvViolationOuterObject"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchLegalPersonPaymentByIdPlateCount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="companyId" type="xs:string"/>
+      <xs:element minOccurs="0" name="plate" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchLegalPersonPaymentByIdPlateCountResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchPenaltyByNaturalPerson">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="driverId" type="xs:string"/>
+      <xs:element minOccurs="0" name="birthday" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="rowStart" type="xs:int"/>
+      <xs:element minOccurs="0" name="rowEnd" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchPenaltyByNaturalPersonResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:emvViolationOuterObject"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchPenaltyByNaturalPersonCountRestrict">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="driverId" type="xs:string"/>
+      <xs:element minOccurs="0" name="birthday" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchPenaltyByNaturalPersonCountRestrictResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchSuspDriverLicence">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="driverId" type="xs:string"/>
+      <xs:element minOccurs="0" name="birthday" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchSuspDriverLicenceResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:emvViolationOuterObject"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchPlateMarkPoint">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="plateNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="vehKind" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchPlateMarkPointResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchLegalPersonPenaltyByIdTicketPlatePage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="companyId" type="xs:string"/>
+      <xs:element minOccurs="0" name="ticket" type="xs:string"/>
+      <xs:element minOccurs="0" name="plate" type="xs:string"/>
+      <xs:element name="canPay" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="rowStart" type="xs:int"/>
+      <xs:element minOccurs="0" name="rowEnd" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchLegalPersonPenaltyByIdTicketPlatePageResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:emvViolationOuterObject"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchLegalPersonPenaltyByIdTicketPlateCount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="companyId" type="xs:string"/>
+      <xs:element minOccurs="0" name="ticket" type="xs:string"/>
+      <xs:element minOccurs="0" name="plate" type="xs:string"/>
+      <xs:element name="canPay" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchLegalPersonPenaltyByIdTicketPlateCountResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchLegalPersonPenaltyByIdPlateCount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="companyId" type="xs:string"/>
+      <xs:element minOccurs="0" name="plate" type="xs:string"/>
+      <xs:element name="canPay" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchLegalPersonPenaltyByIdPlateCountResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchPenaltyByLegalPerson">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="driverId" type="xs:string"/>
+      <xs:element minOccurs="0" name="rowStart" type="xs:int"/>
+      <xs:element minOccurs="0" name="rowEnd" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchPenaltyByLegalPersonResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:emvViolationOuterObject"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchPaymentByNaturalPerson">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="driverId" type="xs:string"/>
+      <xs:element minOccurs="0" name="birthday" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="rowStart" type="xs:int"/>
+      <xs:element minOccurs="0" name="rowEnd" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchPaymentByNaturalPersonResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:emvViolationOuterObject"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchPaymentByNaturalPersonCount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="driverId" type="xs:string"/>
+      <xs:element minOccurs="0" name="birthday" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchPaymentByNaturalPersonCountResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchViolationByTicketPerson">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="vilTicket" type="xs:string"/>
+      <xs:element minOccurs="0" name="driverId" type="xs:string"/>
+      <xs:element minOccurs="0" name="birthday" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchViolationByTicketPersonResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:emvViolationOuterObject"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchSuspPlate">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="plateNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="vehKind" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchSuspPlateResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:emvViolationOuterObject"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchWineVilListByTRP">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="driverId" type="xs:string"/>
+      <xs:element minOccurs="0" name="birthday" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchWineVilListByTRPResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:emvViolationOuterObject"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType final="#all" name="serviceMapEntryArray">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="item" nillable="true" type="tns:serviceMapEntry"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="searchSuspPlateResponse">
+    <wsdl:part element="ns1:searchSuspPlateResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchLegalPersonPenaltyByIdTicketPlatePage">
+    <wsdl:part element="ns1:searchLegalPersonPenaltyByIdTicketPlatePage" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchViolationByTicketPersonPlateResponse">
+    <wsdl:part element="ns1:searchViolationByTicketPersonPlateResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchPlateMarkPoint">
+    <wsdl:part element="ns1:searchPlateMarkPoint" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchPenaltyByLegalPersonCountResponse">
+    <wsdl:part element="ns1:searchPenaltyByLegalPersonCountResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchLegalPersonPaymentByIdPlateCount">
+    <wsdl:part element="ns1:searchLegalPersonPaymentByIdPlateCount" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchWineVilList">
+    <wsdl:part element="ns1:searchWineVilList" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchPenaltyByLegalPersonRestrict">
+    <wsdl:part element="ns1:searchPenaltyByLegalPersonRestrict" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchLegalPersonPenaltyByIdPlatePage">
+    <wsdl:part element="ns1:searchLegalPersonPenaltyByIdPlatePage" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchDriverMarkPointResponse">
+    <wsdl:part element="ns1:searchDriverMarkPointResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchPaymentByNaturalPersonCountResponse">
+    <wsdl:part element="ns1:searchPaymentByNaturalPersonCountResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchPaymentByLegalPersonCount">
+    <wsdl:part element="ns1:searchPaymentByLegalPersonCount" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchMarkByNaturalPersonPageResponse">
+    <wsdl:part element="ns1:searchMarkByNaturalPersonPageResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchLegalPersonPaymentByIdTicketPlatePage">
+    <wsdl:part element="ns1:searchLegalPersonPaymentByIdTicketPlatePage" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchSuspPlate">
+    <wsdl:part element="ns1:searchSuspPlate" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchRepealDataByCarCount">
+    <wsdl:part element="ns1:searchRepealDataByCarCount" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchMarkByLegalPersonCountResponse">
+    <wsdl:part element="ns1:searchMarkByLegalPersonCountResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchWineVilListResponse">
+    <wsdl:part element="ns1:searchWineVilListResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchMarkByLegalPersonCount">
+    <wsdl:part element="ns1:searchMarkByLegalPersonCount" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchMarkByLegalPersonPageResponse">
+    <wsdl:part element="ns1:searchMarkByLegalPersonPageResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchSuspDriverLicenceResponse">
+    <wsdl:part element="ns1:searchSuspDriverLicenceResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchDriverMarkPoint">
+    <wsdl:part element="ns1:searchDriverMarkPoint" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateViolationResponse">
+    <wsdl:part element="ns1:updateViolationResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchMarkByLegalPersonPage">
+    <wsdl:part element="ns1:searchMarkByLegalPersonPage" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchPaymentByNaturalPerson">
+    <wsdl:part element="ns1:searchPaymentByNaturalPerson" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchMarkByNaturalPersonPage">
+    <wsdl:part element="ns1:searchMarkByNaturalPersonPage" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchPaymentByNaturalPersonCount">
+    <wsdl:part element="ns1:searchPaymentByNaturalPersonCount" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchPenaltyByLegalPersonResponse">
+    <wsdl:part element="ns1:searchPenaltyByLegalPersonResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateViolation">
+    <wsdl:part element="ns1:updateViolation" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchPenaltyByLegalPersonCountRestrict">
+    <wsdl:part element="ns1:searchPenaltyByLegalPersonCountRestrict" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchPaymentByLegalPersonResponse">
+    <wsdl:part element="ns1:searchPaymentByLegalPersonResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchPaymentByNaturalPersonResponse">
+    <wsdl:part element="ns1:searchPaymentByNaturalPersonResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchPenaltyByLegalPerson">
+    <wsdl:part element="ns1:searchPenaltyByLegalPerson" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchWineVilListByTRPResponse">
+    <wsdl:part element="ns1:searchWineVilListByTRPResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchPenaltyByNaturalPersonRestrict">
+    <wsdl:part element="ns1:searchPenaltyByNaturalPersonRestrict" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchViolationByTicketPersonResponse">
+    <wsdl:part element="ns1:searchViolationByTicketPersonResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchPenaltyByNaturalPersonRestrictResponse">
+    <wsdl:part element="ns1:searchPenaltyByNaturalPersonRestrictResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchPenaltyByLegalPersonCountRestrictResponse">
+    <wsdl:part element="ns1:searchPenaltyByLegalPersonCountRestrictResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchPaymentByLegalPerson">
+    <wsdl:part element="ns1:searchPaymentByLegalPerson" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchLegalPersonPenaltyByIdPlatePageResponse">
+    <wsdl:part element="ns1:searchLegalPersonPenaltyByIdPlatePageResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchLegalPersonPenaltyByIdTicketPlateCount">
+    <wsdl:part element="ns1:searchLegalPersonPenaltyByIdTicketPlateCount" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchMarkByNaturalPersonCountResponse">
+    <wsdl:part element="ns1:searchMarkByNaturalPersonCountResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchLegalPersonPaymentByIdPlateCountResponse">
+    <wsdl:part element="ns1:searchLegalPersonPaymentByIdPlateCountResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchViolationByTicketPerson">
+    <wsdl:part element="ns1:searchViolationByTicketPerson" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchLegalPersonPenaltyByIdTicketPlateCountResponse">
+    <wsdl:part element="ns1:searchLegalPersonPenaltyByIdTicketPlateCountResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchPenaltyByNaturalPersonCountResponse">
+    <wsdl:part element="ns1:searchPenaltyByNaturalPersonCountResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchMarkByDriver">
+    <wsdl:part element="ns1:searchMarkByDriver" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchWineVilListByTRP">
+    <wsdl:part element="ns1:searchWineVilListByTRP" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchPaymentByLegalPersonCountResponse">
+    <wsdl:part element="ns1:searchPaymentByLegalPersonCountResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchSuspDriverLicence">
+    <wsdl:part element="ns1:searchSuspDriverLicence" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchRepealDataByCarCountResponse">
+    <wsdl:part element="ns1:searchRepealDataByCarCountResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchLegalPersonPaymentByIdTicketPlatePageResponse">
+    <wsdl:part element="ns1:searchLegalPersonPaymentByIdTicketPlatePageResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchLegalPersonPenaltyByIdTicketPlatePageResponse">
+    <wsdl:part element="ns1:searchLegalPersonPenaltyByIdTicketPlatePageResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchPenaltyByNaturalPersonCountRestrictResponse">
+    <wsdl:part element="ns1:searchPenaltyByNaturalPersonCountRestrictResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchMarkByNaturalPersonCount">
+    <wsdl:part element="ns1:searchMarkByNaturalPersonCount" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchVehViolationCountResponse">
+    <wsdl:part element="ns1:searchVehViolationCountResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchPenaltyByLegalPersonRestrictResponse">
+    <wsdl:part element="ns1:searchPenaltyByLegalPersonRestrictResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchLegalPersonPaymentByIdTicketPlateCount">
+    <wsdl:part element="ns1:searchLegalPersonPaymentByIdTicketPlateCount" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchPenaltyByNaturalPerson">
+    <wsdl:part element="ns1:searchPenaltyByNaturalPerson" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchLegalPersonPenaltyByIdPlateCount">
+    <wsdl:part element="ns1:searchLegalPersonPenaltyByIdPlateCount" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchLegalPersonPenaltyByIdPlateCountResponse">
+    <wsdl:part element="ns1:searchLegalPersonPenaltyByIdPlateCountResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchMarkByDriverResponse">
+    <wsdl:part element="ns1:searchMarkByDriverResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchPlateMarkPointResponse">
+    <wsdl:part element="ns1:searchPlateMarkPointResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchPenaltyByNaturalPersonResponse">
+    <wsdl:part element="ns1:searchPenaltyByNaturalPersonResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchPenaltyByLegalPersonCount">
+    <wsdl:part element="ns1:searchPenaltyByLegalPersonCount" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchLegalPersonPaymentByIdPlatePage">
+    <wsdl:part element="ns1:searchLegalPersonPaymentByIdPlatePage" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchPenaltyByNaturalPersonCount">
+    <wsdl:part element="ns1:searchPenaltyByNaturalPersonCount" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchVehViolationCount">
+    <wsdl:part element="ns1:searchVehViolationCount" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchPenaltyByNaturalPersonCountRestrict">
+    <wsdl:part element="ns1:searchPenaltyByNaturalPersonCountRestrict" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchLegalPersonPaymentByIdPlatePageResponse">
+    <wsdl:part element="ns1:searchLegalPersonPaymentByIdPlatePageResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchViolationByTicketPersonPlate">
+    <wsdl:part element="ns1:searchViolationByTicketPersonPlate" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchLegalPersonPaymentByIdTicketPlateCountResponse">
+    <wsdl:part element="ns1:searchLegalPersonPaymentByIdTicketPlateCountResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="EmvViolationService">
+    <wsdl:operation name="updateViolation">
+      <wsdl:input message="ns1:updateViolation" name="updateViolation">
+    </wsdl:input>
+      <wsdl:output message="ns1:updateViolationResponse" name="updateViolationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchMarkByNaturalPersonCount">
+      <wsdl:input message="ns1:searchMarkByNaturalPersonCount" name="searchMarkByNaturalPersonCount">
+    </wsdl:input>
+      <wsdl:output message="ns1:searchMarkByNaturalPersonCountResponse" name="searchMarkByNaturalPersonCountResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchVehViolationCount">
+      <wsdl:input message="ns1:searchVehViolationCount" name="searchVehViolationCount">
+    </wsdl:input>
+      <wsdl:output message="ns1:searchVehViolationCountResponse" name="searchVehViolationCountResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchPenaltyByNaturalPersonCount">
+      <wsdl:input message="ns1:searchPenaltyByNaturalPersonCount" name="searchPenaltyByNaturalPersonCount">
+    </wsdl:input>
+      <wsdl:output message="ns1:searchPenaltyByNaturalPersonCountResponse" name="searchPenaltyByNaturalPersonCountResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchLegalPersonPaymentByIdTicketPlateCount">
+      <wsdl:input message="ns1:searchLegalPersonPaymentByIdTicketPlateCount" name="searchLegalPersonPaymentByIdTicketPlateCount">
+    </wsdl:input>
+      <wsdl:output message="ns1:searchLegalPersonPaymentByIdTicketPlateCountResponse" name="searchLegalPersonPaymentByIdTicketPlateCountResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchRepealDataByCarCount">
+      <wsdl:input message="ns1:searchRepealDataByCarCount" name="searchRepealDataByCarCount">
+    </wsdl:input>
+      <wsdl:output message="ns1:searchRepealDataByCarCountResponse" name="searchRepealDataByCarCountResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchPaymentByLegalPerson">
+      <wsdl:input message="ns1:searchPaymentByLegalPerson" name="searchPaymentByLegalPerson">
+    </wsdl:input>
+      <wsdl:output message="ns1:searchPaymentByLegalPersonResponse" name="searchPaymentByLegalPersonResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchMarkByLegalPersonCount">
+      <wsdl:input message="ns1:searchMarkByLegalPersonCount" name="searchMarkByLegalPersonCount">
+    </wsdl:input>
+      <wsdl:output message="ns1:searchMarkByLegalPersonCountResponse" name="searchMarkByLegalPersonCountResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchPenaltyByLegalPersonCount">
+      <wsdl:input message="ns1:searchPenaltyByLegalPersonCount" name="searchPenaltyByLegalPersonCount">
+    </wsdl:input>
+      <wsdl:output message="ns1:searchPenaltyByLegalPersonCountResponse" name="searchPenaltyByLegalPersonCountResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchPaymentByLegalPersonCount">
+      <wsdl:input message="ns1:searchPaymentByLegalPersonCount" name="searchPaymentByLegalPersonCount">
+    </wsdl:input>
+      <wsdl:output message="ns1:searchPaymentByLegalPersonCountResponse" name="searchPaymentByLegalPersonCountResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchMarkByDriver">
+      <wsdl:input message="ns1:searchMarkByDriver" name="searchMarkByDriver">
+    </wsdl:input>
+      <wsdl:output message="ns1:searchMarkByDriverResponse" name="searchMarkByDriverResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchLegalPersonPaymentByIdPlatePage">
+      <wsdl:input message="ns1:searchLegalPersonPaymentByIdPlatePage" name="searchLegalPersonPaymentByIdPlatePage">
+    </wsdl:input>
+      <wsdl:output message="ns1:searchLegalPersonPaymentByIdPlatePageResponse" name="searchLegalPersonPaymentByIdPlatePageResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchDriverMarkPoint">
+      <wsdl:input message="ns1:searchDriverMarkPoint" name="searchDriverMarkPoint">
+    </wsdl:input>
+      <wsdl:output message="ns1:searchDriverMarkPointResponse" name="searchDriverMarkPointResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchMarkByLegalPersonPage">
+      <wsdl:input message="ns1:searchMarkByLegalPersonPage" name="searchMarkByLegalPersonPage">
+    </wsdl:input>
+      <wsdl:output message="ns1:searchMarkByLegalPersonPageResponse" name="searchMarkByLegalPersonPageResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchPenaltyByNaturalPersonRestrict">
+      <wsdl:input message="ns1:searchPenaltyByNaturalPersonRestrict" name="searchPenaltyByNaturalPersonRestrict">
+    </wsdl:input>
+      <wsdl:output message="ns1:searchPenaltyByNaturalPersonRestrictResponse" name="searchPenaltyByNaturalPersonRestrictResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchMarkByNaturalPersonPage">
+      <wsdl:input message="ns1:searchMarkByNaturalPersonPage" name="searchMarkByNaturalPersonPage">
+    </wsdl:input>
+      <wsdl:output message="ns1:searchMarkByNaturalPersonPageResponse" name="searchMarkByNaturalPersonPageResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchLegalPersonPaymentByIdTicketPlatePage">
+      <wsdl:input message="ns1:searchLegalPersonPaymentByIdTicketPlatePage" name="searchLegalPersonPaymentByIdTicketPlatePage">
+    </wsdl:input>
+      <wsdl:output message="ns1:searchLegalPersonPaymentByIdTicketPlatePageResponse" name="searchLegalPersonPaymentByIdTicketPlatePageResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchWineVilList">
+      <wsdl:input message="ns1:searchWineVilList" name="searchWineVilList">
+    </wsdl:input>
+      <wsdl:output message="ns1:searchWineVilListResponse" name="searchWineVilListResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchPenaltyByLegalPersonRestrict">
+      <wsdl:input message="ns1:searchPenaltyByLegalPersonRestrict" name="searchPenaltyByLegalPersonRestrict">
+    </wsdl:input>
+      <wsdl:output message="ns1:searchPenaltyByLegalPersonRestrictResponse" name="searchPenaltyByLegalPersonRestrictResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchPenaltyByLegalPersonCountRestrict">
+      <wsdl:input message="ns1:searchPenaltyByLegalPersonCountRestrict" name="searchPenaltyByLegalPersonCountRestrict">
+    </wsdl:input>
+      <wsdl:output message="ns1:searchPenaltyByLegalPersonCountRestrictResponse" name="searchPenaltyByLegalPersonCountRestrictResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchLegalPersonPenaltyByIdPlatePage">
+      <wsdl:input message="ns1:searchLegalPersonPenaltyByIdPlatePage" name="searchLegalPersonPenaltyByIdPlatePage">
+    </wsdl:input>
+      <wsdl:output message="ns1:searchLegalPersonPenaltyByIdPlatePageResponse" name="searchLegalPersonPenaltyByIdPlatePageResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchViolationByTicketPersonPlate">
+      <wsdl:input message="ns1:searchViolationByTicketPersonPlate" name="searchViolationByTicketPersonPlate">
+    </wsdl:input>
+      <wsdl:output message="ns1:searchViolationByTicketPersonPlateResponse" name="searchViolationByTicketPersonPlateResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchLegalPersonPaymentByIdPlateCount">
+      <wsdl:input message="ns1:searchLegalPersonPaymentByIdPlateCount" name="searchLegalPersonPaymentByIdPlateCount">
+    </wsdl:input>
+      <wsdl:output message="ns1:searchLegalPersonPaymentByIdPlateCountResponse" name="searchLegalPersonPaymentByIdPlateCountResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchPenaltyByNaturalPerson">
+      <wsdl:input message="ns1:searchPenaltyByNaturalPerson" name="searchPenaltyByNaturalPerson">
+    </wsdl:input>
+      <wsdl:output message="ns1:searchPenaltyByNaturalPersonResponse" name="searchPenaltyByNaturalPersonResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchPenaltyByNaturalPersonCountRestrict">
+      <wsdl:input message="ns1:searchPenaltyByNaturalPersonCountRestrict" name="searchPenaltyByNaturalPersonCountRestrict">
+    </wsdl:input>
+      <wsdl:output message="ns1:searchPenaltyByNaturalPersonCountRestrictResponse" name="searchPenaltyByNaturalPersonCountRestrictResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchSuspDriverLicence">
+      <wsdl:input message="ns1:searchSuspDriverLicence" name="searchSuspDriverLicence">
+    </wsdl:input>
+      <wsdl:output message="ns1:searchSuspDriverLicenceResponse" name="searchSuspDriverLicenceResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchPlateMarkPoint">
+      <wsdl:input message="ns1:searchPlateMarkPoint" name="searchPlateMarkPoint">
+    </wsdl:input>
+      <wsdl:output message="ns1:searchPlateMarkPointResponse" name="searchPlateMarkPointResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchLegalPersonPenaltyByIdTicketPlatePage">
+      <wsdl:input message="ns1:searchLegalPersonPenaltyByIdTicketPlatePage" name="searchLegalPersonPenaltyByIdTicketPlatePage">
+    </wsdl:input>
+      <wsdl:output message="ns1:searchLegalPersonPenaltyByIdTicketPlatePageResponse" name="searchLegalPersonPenaltyByIdTicketPlatePageResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchLegalPersonPenaltyByIdTicketPlateCount">
+      <wsdl:input message="ns1:searchLegalPersonPenaltyByIdTicketPlateCount" name="searchLegalPersonPenaltyByIdTicketPlateCount">
+    </wsdl:input>
+      <wsdl:output message="ns1:searchLegalPersonPenaltyByIdTicketPlateCountResponse" name="searchLegalPersonPenaltyByIdTicketPlateCountResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchLegalPersonPenaltyByIdPlateCount">
+      <wsdl:input message="ns1:searchLegalPersonPenaltyByIdPlateCount" name="searchLegalPersonPenaltyByIdPlateCount">
+    </wsdl:input>
+      <wsdl:output message="ns1:searchLegalPersonPenaltyByIdPlateCountResponse" name="searchLegalPersonPenaltyByIdPlateCountResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchPenaltyByLegalPerson">
+      <wsdl:input message="ns1:searchPenaltyByLegalPerson" name="searchPenaltyByLegalPerson">
+    </wsdl:input>
+      <wsdl:output message="ns1:searchPenaltyByLegalPersonResponse" name="searchPenaltyByLegalPersonResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchPaymentByNaturalPerson">
+      <wsdl:input message="ns1:searchPaymentByNaturalPerson" name="searchPaymentByNaturalPerson">
+    </wsdl:input>
+      <wsdl:output message="ns1:searchPaymentByNaturalPersonResponse" name="searchPaymentByNaturalPersonResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchPaymentByNaturalPersonCount">
+      <wsdl:input message="ns1:searchPaymentByNaturalPersonCount" name="searchPaymentByNaturalPersonCount">
+    </wsdl:input>
+      <wsdl:output message="ns1:searchPaymentByNaturalPersonCountResponse" name="searchPaymentByNaturalPersonCountResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchViolationByTicketPerson">
+      <wsdl:input message="ns1:searchViolationByTicketPerson" name="searchViolationByTicketPerson">
+    </wsdl:input>
+      <wsdl:output message="ns1:searchViolationByTicketPersonResponse" name="searchViolationByTicketPersonResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchSuspPlate">
+      <wsdl:input message="ns1:searchSuspPlate" name="searchSuspPlate">
+    </wsdl:input>
+      <wsdl:output message="ns1:searchSuspPlateResponse" name="searchSuspPlateResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchWineVilListByTRP">
+      <wsdl:input message="ns1:searchWineVilListByTRP" name="searchWineVilListByTRP">
+    </wsdl:input>
+      <wsdl:output message="ns1:searchWineVilListByTRPResponse" name="searchWineVilListByTRPResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

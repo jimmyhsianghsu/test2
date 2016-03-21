@@ -1,0 +1,267 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://pub.service.vil.m3.mvdis.gov/" name="PolViolationService" targetNamespace="http://pub.service.vil.m3.mvdis.gov/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://pub.service.vil.m3.mvdis.gov/" elementFormDefault="unqualified" targetNamespace="http://pub.service.vil.m3.mvdis.gov/" version="1.0">
+
+  <xs:element name="savePolViolation" type="tns:savePolViolation"/>
+
+  <xs:element name="savePolViolationDeprecated" type="tns:savePolViolationDeprecated"/>
+
+  <xs:element name="savePolViolationDeprecatedResponse" type="tns:savePolViolationDeprecatedResponse"/>
+
+  <xs:element name="savePolViolationResponse" type="tns:savePolViolationResponse"/>
+
+  <xs:element name="searchPolCarViolation" type="tns:searchPolCarViolation"/>
+
+  <xs:element name="searchPolCarViolationResponse" type="tns:searchPolCarViolationResponse"/>
+
+  <xs:element name="searchPolViolationByCar" type="tns:searchPolViolationByCar"/>
+
+  <xs:element name="searchPolViolationByCarResponse" type="tns:searchPolViolationByCarResponse"/>
+
+  <xs:element name="searchPolViolationByPerson" type="tns:searchPolViolationByPerson"/>
+
+  <xs:element name="searchPolViolationByPersonResponse" type="tns:searchPolViolationByPersonResponse"/>
+
+  <xs:complexType name="searchPolViolationByCar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="plateNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="vehKind" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchPolViolationByCarResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:vilTrafficRuleEntity"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="vilTrafficRuleEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="vilTicket" type="xs:string"/>
+      <xs:element minOccurs="0" name="driverId" type="xs:string"/>
+      <xs:element minOccurs="0" name="driverBirthday" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="plateNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="vilKindNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="vehKindNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="carKindNo" type="xs:string"/>
+      <xs:element name="rule1No" type="xs:int"/>
+      <xs:element name="rule2No" type="xs:int"/>
+      <xs:element name="rule3No" type="xs:int"/>
+      <xs:element name="rule4No" type="xs:int"/>
+      <xs:element name="penalty" type="xs:int"/>
+      <xs:element name="payment" type="xs:int"/>
+      <xs:element minOccurs="0" name="accuseNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="accuseType" type="xs:string"/>
+      <xs:element name="accuseState" type="xs:unsignedShort"/>
+      <xs:element minOccurs="0" name="driveMark" type="xs:string"/>
+      <xs:element minOccurs="0" name="plateMark" type="xs:string"/>
+      <xs:element minOccurs="0" name="driverSusp" type="xs:string"/>
+      <xs:element minOccurs="0" name="plateSusp" type="xs:string"/>
+      <xs:element minOccurs="0" name="respPeopleType" type="xs:string"/>
+      <xs:element minOccurs="0" name="payWayNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="closeNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="vilDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="inDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="arriveDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="dmv" type="xs:string"/>
+      <xs:element minOccurs="0" name="sprvnNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="adjNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="upDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="updateDmv" type="xs:string"/>
+      <xs:element minOccurs="0" name="updateUid" type="xs:string"/>
+      <xs:element minOccurs="0" name="vilAddressNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="vilLocation" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyId" type="xs:string"/>
+      <xs:element minOccurs="0" name="counterNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="holdNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="backDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="receiveState" type="xs:string"/>
+      <xs:element minOccurs="0" name="receiveDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="penaltyLevel" type="xs:string"/>
+      <xs:element name="isForced" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="createUid" type="xs:string"/>
+      <xs:element minOccurs="0" name="createDmv" type="xs:string"/>
+      <xs:element minOccurs="0" name="isAdjudged" type="xs:string"/>
+      <xs:element minOccurs="0" name="adjDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="deputy" type="xs:string"/>
+      <xs:element minOccurs="0" name="adjudicator" type="xs:string"/>
+      <xs:element name="firstTotal" type="xs:int"/>
+      <xs:element name="secondTotal" type="xs:int"/>
+      <xs:element name="thirdTotal" type="xs:int"/>
+      <xs:element name="fourthTotal" type="xs:int"/>
+      <xs:element name="forbidTest" type="xs:int"/>
+      <xs:element minOccurs="0" name="rcvDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="inUserID" type="xs:string"/>
+      <xs:element minOccurs="0" name="fileName" type="xs:string"/>
+      <xs:element minOccurs="0" name="insureType" type="xs:string"/>
+      <xs:element minOccurs="0" name="errStsV" type="xs:string"/>
+      <xs:element minOccurs="0" name="errStsD" type="xs:string"/>
+      <xs:element minOccurs="0" name="execSts" type="xs:string"/>
+      <xs:element minOccurs="0" name="ownId" type="xs:string"/>
+      <xs:element minOccurs="0" name="ownName" type="xs:string"/>
+      <xs:element minOccurs="0" name="drvName" type="xs:string"/>
+      <xs:element minOccurs="0" name="vehAddr" type="xs:string"/>
+      <xs:element minOccurs="0" name="drvAddr" type="xs:string"/>
+      <xs:element minOccurs="0" name="vehAddrZip" type="xs:string"/>
+      <xs:element minOccurs="0" name="drvAddrZip" type="xs:string"/>
+      <xs:element minOccurs="0" name="color" type="xs:string"/>
+      <xs:element name="payment1" type="xs:int"/>
+      <xs:element name="payment2" type="xs:int"/>
+      <xs:element name="payment3" type="xs:int"/>
+      <xs:element name="payment4" type="xs:int"/>
+      <xs:element minOccurs="0" name="actNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="policeMan" type="xs:string"/>
+      <xs:element minOccurs="0" name="plateStatus" type="xs:string"/>
+      <xs:element minOccurs="0" name="execInsert" type="xs:string"/>
+      <xs:element minOccurs="0" name="execUpdate" type="xs:string"/>
+      <xs:element minOccurs="0" name="execDelete" type="xs:string"/>
+      <xs:element minOccurs="0" name="format" type="xs:string"/>
+      <xs:element minOccurs="0" name="logTime" type="xs:dateTime"/>
+      <xs:element name="flagFormerVehOwner" type="xs:boolean"/>
+      <xs:element name="flagDeleteViolationByTickePlate" type="xs:boolean"/>
+      <xs:element name="flagDeleteViolationByTickePerson" type="xs:boolean"/>
+      <xs:element name="flagInsertViolation" type="xs:boolean"/>
+      <xs:element name="flagUpdateViolationByTickePlate" type="xs:boolean"/>
+      <xs:element name="flagPlateChecked" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="ownBirthday" type="xs:dateTime"/>
+      <xs:element name="regSeq" type="xs:int"/>
+      <xs:element name="carCC" type="xs:int"/>
+      <xs:element minOccurs="0" name="isCollection" type="xs:string"/>
+      <xs:element minOccurs="0" name="fileDmv" type="xs:string"/>
+      <xs:element name="fileDate" type="xs:int"/>
+      <xs:element minOccurs="0" name="penaltyMode" type="xs:string"/>
+      <xs:element minOccurs="0" name="completeAddr" type="xs:string"/>
+      <xs:element minOccurs="0" name="completeZipCode" type="xs:string"/>
+      <xs:element name="isPedestrianRule" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="carPlateNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="specialPunishNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="forbidNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="completeAddrDrv" type="xs:string"/>
+      <xs:element minOccurs="0" name="completeZipCodeDrv" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchPolViolationByPerson">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="driverId" type="xs:string"/>
+      <xs:element minOccurs="0" name="birthday" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchPolViolationByPersonResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:vilTrafficRuleEntity"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchPolCarViolation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ticket" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchPolCarViolationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:vilTrafficRuleEntity"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="savePolViolationDeprecated">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:vilTrafficRuleEntity"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="savePolViolationDeprecatedResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="savePolViolation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:vilTrafficRuleEntity"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="savePolViolationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:vilTrafficRuleEntity"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="savePolViolation">
+    <wsdl:part element="ns1:savePolViolation" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="savePolViolationDeprecated">
+    <wsdl:part element="ns1:savePolViolationDeprecated" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchPolCarViolationResponse">
+    <wsdl:part element="ns1:searchPolCarViolationResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="savePolViolationResponse">
+    <wsdl:part element="ns1:savePolViolationResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchPolViolationByPersonResponse">
+    <wsdl:part element="ns1:searchPolViolationByPersonResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchPolViolationByCarResponse">
+    <wsdl:part element="ns1:searchPolViolationByCarResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchPolViolationByCar">
+    <wsdl:part element="ns1:searchPolViolationByCar" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="savePolViolationDeprecatedResponse">
+    <wsdl:part element="ns1:savePolViolationDeprecatedResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchPolCarViolation">
+    <wsdl:part element="ns1:searchPolCarViolation" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchPolViolationByPerson">
+    <wsdl:part element="ns1:searchPolViolationByPerson" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="PolViolationService">
+    <wsdl:operation name="searchPolViolationByCar">
+      <wsdl:input message="ns1:searchPolViolationByCar" name="searchPolViolationByCar">
+    </wsdl:input>
+      <wsdl:output message="ns1:searchPolViolationByCarResponse" name="searchPolViolationByCarResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchPolViolationByPerson">
+      <wsdl:input message="ns1:searchPolViolationByPerson" name="searchPolViolationByPerson">
+    </wsdl:input>
+      <wsdl:output message="ns1:searchPolViolationByPersonResponse" name="searchPolViolationByPersonResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchPolCarViolation">
+      <wsdl:input message="ns1:searchPolCarViolation" name="searchPolCarViolation">
+    </wsdl:input>
+      <wsdl:output message="ns1:searchPolCarViolationResponse" name="searchPolCarViolationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="savePolViolationDeprecated">
+      <wsdl:input message="ns1:savePolViolationDeprecated" name="savePolViolationDeprecated">
+    </wsdl:input>
+      <wsdl:output message="ns1:savePolViolationDeprecatedResponse" name="savePolViolationDeprecatedResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="savePolViolation">
+      <wsdl:input message="ns1:savePolViolation" name="savePolViolation">
+    </wsdl:input>
+      <wsdl:output message="ns1:savePolViolationResponse" name="savePolViolationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

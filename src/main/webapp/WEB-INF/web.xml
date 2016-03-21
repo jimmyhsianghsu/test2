@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+	<display-name>ch.test2</display-name>
+  
+	<servlet><servlet-name>SqlTest</servlet-name><servlet-class>test.SqlTest</servlet-class></servlet>
+	<servlet-mapping><servlet-name>SqlTest</servlet-name><url-pattern>/SqlTest</url-pattern></servlet-mapping>
+	<servlet><servlet-name>compare</servlet-name><servlet-class>compare.Compare</servlet-class></servlet>
+	<servlet-mapping><servlet-name>compare</servlet-name><url-pattern>/compare</url-pattern></servlet-mapping>
+	<servlet><servlet-name>vcompare</servlet-name><servlet-class>compare.Vcompare</servlet-class></servlet>
+	<servlet-mapping><servlet-name>vcompare</servlet-name><url-pattern>/vcompare</url-pattern></servlet-mapping>
+    <servlet><servlet-name>ServiceTest</servlet-name><servlet-class>test.ServiceTest</servlet-class></servlet>
+	<servlet-mapping><servlet-name>ServiceTest</servlet-name><url-pattern>/ServiceTest</url-pattern></servlet-mapping>
+	<servlet><servlet-name>fileBrowser</servlet-name><servlet-class>compare.FileBrowser</servlet-class></servlet>
+	<servlet-mapping><servlet-name>fileBrowser</servlet-name><url-pattern>/fileBrowser</url-pattern></servlet-mapping>
+	<servlet><servlet-name>folderComparator</servlet-name><servlet-class>compare.FolderComparator</servlet-class></servlet>
+	<servlet-mapping><servlet-name>folderComparator</servlet-name><url-pattern>/folderComparator</url-pattern></servlet-mapping>
+	<servlet><servlet-name>wsTest</servlet-name><servlet-class>test.WsTest</servlet-class></servlet>
+	<servlet-mapping><servlet-name>wsTest</servlet-name><url-pattern>/wsTest</url-pattern></servlet-mapping>
+	
+	<listener><listener-class>org.springframework.web.context.ContextLoaderListener</listener-class></listener>
+	<context-param><param-name>contextConfigLocation</param-name><param-value>classpath*:META-INF/spring/*.xml</param-value></context-param>
+</web-app>
