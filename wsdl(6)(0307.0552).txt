@@ -1,0 +1,6 @@
+<wsdl>${basedir}/PhoneViolationService1.xml</wsdl>
+<wsdl>${basedir}/PolViolationService1.xml</wsdl>
+<wsdl>${basedir}/CoreBatchService1.xml</wsdl>
+<wsdl>${basedir}/EmvViolationService1.xml</wsdl>
+<wsdl>${basedir}/BatchTestService1.xml</wsdl>
+<wsdl>${basedir}/TpeAdjViolationService1.xml</wsdl>
