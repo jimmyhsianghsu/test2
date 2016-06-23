@@ -35,33 +35,30 @@
 	<build>
 		<finalName>ch.test2</finalName>
 		<plugins>
-			<plugin>
-			    <groupId>org.apache.cxf</groupId>
-			    <artifactId>cxf-codegen-plugin</artifactId>
-			    <version>2.7.7</version>
-			    <executions>
-			        <execution>
-			            <id>generate-sources</id>
-			            <phase>generate-sources</phase>
-			            <configuration>
-			                <sourceRoot>${project.build.directory}/src/main/java</sourceRoot>
-			                <wsdlOptions>
-			                    <wsdlOption>
-<!-- 			                        <wsdl>${basedir}/PhoneViolationService1.xml</wsdl> -->
-<!-- <wsdl>${basedir}/PolViolationService1.xml</wsdl> -->
-<!-- <wsdl>${basedir}/CoreBatchService1.xml</wsdl> -->
-<!-- <wsdl>${basedir}/EmvViolationService1.xml</wsdl> -->
-<!-- <wsdl>${basedir}/BatchTestService1.xml</wsdl> -->
-<wsdl>${basedir}/TpeAdjViolationService1.xml</wsdl>
-			                    </wsdlOption>
-			                </wsdlOptions>
-			            </configuration>
-			            <goals>
-			                <goal>wsdl2java</goal>
-			            </goals>
-			        </execution>
-			    </executions>
-			</plugin>
+<!-- 			<plugin> -->
+<!-- 			    <groupId>org.apache.cxf</groupId> -->
+<!-- 			    <artifactId>cxf-codegen-plugin</artifactId> -->
+<!-- 			    <version>2.7.7</version> -->
+<!-- 			    <executions> -->
+<!-- 			        <execution> -->
+<!-- 			            <id>generate-sources</id> -->
+<!-- 			            <phase>generate-sources</phase> -->
+<!-- 			            <configuration> -->
+<!-- 			                <sourceRoot>${project.build.directory}/src/main/java</sourceRoot> -->
+<!-- 			                <wsdlOptions> -->
+<!-- 			                    <wsdlOption> -->
+<!-- 			                        <wsdl>${emv.prd}</wsdl> -->
+<!-- 			                        <wsdl>${pol.vil}</wsdl> -->
+<!-- 									<wsdl>${batch.app}</wsdl> -->
+<!-- 			                    </wsdlOption> -->
+<!-- 			                </wsdlOptions> -->
+<!-- 			            </configuration> -->
+<!-- 			            <goals> -->
+<!-- 			                <goal>wsdl2java</goal> -->
+<!-- 			            </goals> -->
+<!-- 			        </execution> -->
+<!-- 			    </executions> -->
+<!-- 			</plugin> -->
 		</plugins>
 	</build>
 </project>
